@@ -1,0 +1,51 @@
+.call-to-action {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+  }
+  
+  .cta-content {
+    position: relative;
+    background-color: var(--accent-color);
+    border-radius: 24px;
+    padding: 48px;
+    overflow: hidden;
+  }
+  
+  .cta-content h2 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  
+  .cta-content p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 32px;
+    max-width: 600px;
+  }
+  
+  .cta-button {
+    background-color: var(--text-color);
+    color: var(--accent-color);
+    border: none;
+    padding: 16px 32px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .cta-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    overflow: hidden;
+  }
+  
+  
+  
+  

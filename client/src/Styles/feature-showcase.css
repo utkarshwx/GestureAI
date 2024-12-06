@@ -1,0 +1,119 @@
+.feature-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .feature-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 24px;
+  }
+  
+  .feature-icon {
+    width: 32px;
+    height: 32px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .feature-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .feature-message {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .feature-description h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .feature-description p {
+    font-size: 14px;
+    color: var(--secondary-color);
+  }
+  
+  .feature-image {
+    aspect-ratio: 3/4;
+    background-color: rgba(82, 97, 255, 0.1);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  
+  .feature-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .feature-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .feature-subtitle {
+    font-size: 14px;
+    color: var(--secondary-color);
+  }
+  
+  .feature-content {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .feature-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 8px 0 0;
+  }
+  
+  .feature-content li {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .feature-message.outgoing {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    align-self: flex-end;
+  }
+  
+  .feature-message.incoming {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  
