@@ -4,7 +4,7 @@ import Header from "../../Layout/Header/Header";
 
 const VideoInteration = () => {
   const [file, setFile] = useState<File | null>(null);
-  // const [preference, setPreference] = useState("tennis");
+  const [preference, setPreference] = useState("tennis");
   const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [videoPreviewUrl, setVideoPreviewUrl] = useState<string | null>(null);
@@ -73,6 +73,7 @@ const VideoInteration = () => {
 
     const formData = new FormData();
     formData.append("video", uploadFile, file ? file.name : "recorded_video.mp4");
+    formData.append("preference", preference);
 
 
     try {
@@ -92,6 +93,8 @@ const VideoInteration = () => {
           return prev + 10;
         });
       }, 200);
+
+      console.log(formData);
 
       const response = await fetch("http://127.0.0.1:8000/upload", {
         method: "POST",
@@ -196,11 +199,12 @@ const VideoInteration = () => {
                 
                 <select 
                 name="preference" 
-                // value={preference}
-                // onChange={(e) => setPreference(e.target.value)}
-                className="w-full bg-transparent text-black hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center justify-center transition duration-150 ease-in-out">
-                    <option value="tennis">Tennis</option>
-                    {/* <option value="basketball">Basketball</option> */}
+                value={preference}
+                onChange={(e) => setPreference(e.target.value)}
+                className="w-full bg-transparent  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center justify-center transition duration-150 ease-in-out">
+                    <option value="tennis" className="text-black hover:text-white">Tennis</option>
+                    <option value="basketball" className="text-black hover:text-white">Basketball</option>
+                    <option value="football" className="text-black hover:text-white">Football</option>
                   
                 </select>
               </div>
